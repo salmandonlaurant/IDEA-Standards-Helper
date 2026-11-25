@@ -16,6 +16,26 @@ The app makes a backup first and creates everything IDEA needs. No command promp
 
 Optional: expand **"let the app open IDEA for you"** and browse to `IDEA.exe` if you want the app to launch IDEA automatically.
 
+## AI assistant inside the app (OpenCode)
+
+Expand **"4 AI Assistant (OpenCode)"** (or **"4 Βοηθός AI (OpenCode)"** in Greek).
+
+One-time setup:
+
+1. Click **Set up OpenCode (one time)**. The app downloads the official Windows CLI (~130 MB) into `%LOCALAPPDATA%\IDEA Standards Helper\opencode\` — no terminal needed.
+2. Paste an **OpenRouter API key** (from <https://openrouter.ai/keys>). It is saved only on that computer.
+3. Click **Start assistant**. The app starts a private local OpenCode server, creates `opencode.jsonc` and an `idea-helper` skill in the drawings folder, and opens a chat.
+
+She can then type in **Greek or English**, e.g.:
+
+- "Apply the office standards to all drawings"
+- "Τι πρέπει να αλλάξω σε αυτό το σχέδιο;"
+- "Create a ventilation layer and explain how to run the script"
+
+The assistant has full access to the selected drawings folder. It uses a hidden CLI mode in the same `.exe` (`--cli help`, `--cli report`, `--cli apply`) and reads `idea_helper_last_result.json`. Backups are still created before standard changes. She still runs the generated `.scr` with `SCRIPT` in IDEA.
+
+Click **Stop assistant** when finished; the local server is closed.
+
 ## Files under the hood
 
 - `app.py` — the desktop app.
