@@ -6,6 +6,7 @@ Double-click **`Start IDEA Standards Helper.bat`** (or the built `.exe` in `dist
 
 In the app:
 
+0. **Language** → choose **English** or **Ελληνικά** in the top-right. The whole interface changes instantly and remembers the choice.
 1. **Where are your drawings?** → Browse to the project folder.
 2. **How should the drawings look?** → leave the recommended values, or change them.
 3. Press the green **Apply to my drawings** button.
